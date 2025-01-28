@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title= title
+    body
+        h1 Add or Update TMNT Contact
+        a(href="/") Return to Homepage
+        form(action="/update-contact" method="POST")
+            label(for="email") Email:
+            input(type="email" name="email" required)
+            br
+            label(for="tmnt_name") TMNT Name:
+            input(type="text" name="tmnt_name" required)
+            br
+            label(for="tmnt_bio") TMNT Bio:
+            textarea(name="tmnt_bio" required)
+            br
+            label(for="tmnt_weapon") TMNT Weapon:
+            select(name="tmnt_weapon")
+                option(value="Katana") Katana
+                option(value="Nunchaku") Nunchaku
+                option(value="Sai") Sai
+                option(value="Bo Staff") Bo Staff
+            br
+            button(type="submit") Submit

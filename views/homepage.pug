@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= title
+    body
+        h1 TMNT Contacts
+        a(href="/update-contact") Add a New Contact
+        table
+            thead
+                tr
+                    th Email
+                    th TMNT Name
+                    th TMNT Bio
+                    th TMNT Weapon
+            tbody
+                each contact in contacts
+                    tr
+                        td= contact.properties.email
+                        td= contact.properties.tmnt_name
+                        td= contact.properties.tmnt_bio
+                        td= contact.properties.tmnt_weapon
